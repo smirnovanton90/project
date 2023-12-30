@@ -1,6 +1,8 @@
-airflow
-config
-datasets
-mlflow
-mlruns
-venv
+/airflow/*
+!/airflow/dags
+!/airflow/airflow.cfg
+/config/*
+/datasets/*
+/mlflow/*
+/mlruns/*
+/venv/*
