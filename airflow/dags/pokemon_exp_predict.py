@@ -12,10 +12,10 @@ args = {
 }
  
 with DAG(
-    dag_id='youtube_comments_score',
+    dag_id='pokemon_exp_predict.',
     default_args = args,
     schedule = "@weekly",
-    tags=['youtube', 'score'],
+    tags=['pokemon'],
 ) as dag:
     get_data = BashOperator(task_id='get_data',
                             bash_command="python3 /home/sflow-admin/project/scripts/get_data.py",
