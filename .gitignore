@@ -1,5 +1,6 @@
 /airflow/*
 !/airflow/dags
+/airflow/dags/__pycache__
 !/airflow/airflow.cfg
 /config/*
 /datasets/*

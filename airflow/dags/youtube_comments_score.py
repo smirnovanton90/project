@@ -5,7 +5,7 @@ import datetime as dt
  
 args = {
     "owner": "admin",
-    "start_date": dt.datetime(2022, 12, 1),
+    "start_date": dt.datetime(2024, 1, 1),
     "retries": 1,
     "retry_delays": dt.timedelta(minutes=1),
     "depends_on_past": False

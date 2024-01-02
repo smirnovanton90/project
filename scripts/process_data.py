@@ -1,9 +1,13 @@
 import pandas as pd
- 
+from sklearn.preprocessing import OneHotEncoder
+
+# Считываем из файла 
 df = pd.read_csv('/home/sflow-admin/project/datasets/data.csv', header=None)
- 
-df[0] = (df[0]-df[0].min())/(df[0].max()-df[0].min())
- 
-with open('/home/sflow-admin/project/datasets/data_processed.csv', 'w') as f:
-    for i, item in enumerate(df[0].values):
-        f.write("{},{}\n".format(i, item))
+
+# Делаем OHE для колонки 'main_type'
+one_hot = pd.get_dummies(df['main_type'])
+df = df.drop('main_type',axis = 1)
+df = df.join(one_hot)
+
+# Записываем в файл
+df.to_csv('/home/sflow-admin/project/datasets/data_processed.csv')
