@@ -20,7 +20,7 @@ weights = []
 exp = []
 
 # Количество покемонов для запроса
-num = 5
+num = 200
 
 with mlflow.start_run():
     # собираем данные через API
