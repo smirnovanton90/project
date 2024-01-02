@@ -13,8 +13,8 @@ args = {
  
 with DAG(
     dag_id='youtube_comments_score',
-    default_args=args,
-    schedule_interval=None,
+    default_args = args,
+    schedule = "@weekly",
     tags=['youtube', 'score'],
 ) as dag:
     get_data = BashOperator(task_id='get_data',
