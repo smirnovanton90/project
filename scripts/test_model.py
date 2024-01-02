@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
  
 # Считываем из файла тестовые данные
-df = pd.read_csv('/home/sflow-admin/project/datasets/data_test.csv', header=None)
+df = pd.read_csv('/home/sflow-admin/project/datasets/data_test.csv')
 
 # Выделяем фичи и целевые значения в тестовых данных
 X_test = df.drop(['name', 'exp'], axis = 1)

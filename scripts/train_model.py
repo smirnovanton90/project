@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
  
 # Считываем из файла 
-df = pd.read_csv('/home/sflow-admin/project/datasets/data_train.csv', header=None)
+df = pd.read_csv('/home/sflow-admin/project/datasets/data_train.csv')
 
 # Выделяем фичи и целевые значения
 X_train = df.drop(['name', 'exp'], axis = 1)

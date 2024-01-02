@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 
 # Считываем из файла 
-df = pd.read_csv('/home/sflow-admin/project/datasets/data.csv', header=None)
+df = pd.read_csv('/home/sflow-admin/project/datasets/data.csv')
 
 # Делаем OHE для колонки 'main_type'
 one_hot = pd.get_dummies(df['main_type'])

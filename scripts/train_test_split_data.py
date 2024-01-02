@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
  
 # Считываем из файла 
-df = pd.read_csv('/home/sflow-admin/project/datasets/data_processed.csv', header=None)
+df = pd.read_csv('/home/sflow-admin/project/datasets/data_processed.csv')
 
 # Разделяем на тренировочную и тестовую выборки
 idxs = np.array(df.index.values)
